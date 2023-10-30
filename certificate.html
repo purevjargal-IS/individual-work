@@ -317,7 +317,7 @@
                 display: flex;
             }
             @media (max-width: 1024px) {
-                ul,li, .pro, .icons{
+                ul,li, .pro, .icons, .portrait{
                     display:none;
                 }
                 .icon--menu--toggle{
@@ -329,6 +329,12 @@
                 }
             }
             @media (max-width: 720px){
+                html{
+                    display: flex;
+                }
+                .menu{
+                    visibility: visible;
+                }
                 post{
                     display: flex;
                     flex-direction: column;
@@ -627,7 +633,7 @@
                         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                             <line x1="2" y1="2" x2="10" y2="10" stroke="black" stroke-width="2" />
                             <line x1="10" y1="10" x2="18" y2="2" stroke="black" stroke-width="2" />
-                        </svg>  
+                        </svg>
                     </div>
                     <div class="show-list1">
                         <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -704,6 +710,6 @@
                 <p>The certificate is ready to claim for you. You did an amazing job in the course and earned it.</p>
                 <button>Claim Certificate</button>
             </div>
-        </div>
+        </div>     
     </body>
 </html>
