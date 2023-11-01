@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
@@ -192,13 +191,34 @@
         .Select :hover{
            color: #FFA30F;
         }
+        @media (max-width:720px) {
+            body{
+                flex-direction: column;
+                justify-self: center;
+            }
+            .header{
+                flex-direction: column;
+            }
+            .header2{
+                margin-top: 50px;
+            }
+            .flex-box1{
+                margin-top: 2500px;
+                margin-left: auto;
+            }
+            .flex-box2{
+                margin-left: auto;
+            }
+            .flex-box3{
+                margin-left: 120px;
+            }
+            .Try, .Select{
+                margin-bottom: 40px;
+            }
+        }
     </style>
-
-
-
 <body >
     <a href="">✘</a>
-
     <div class="header">
         <h1 style="text-align: center; justify-content: center">Invest in your learning with Sololearn <span>Pro</span></h1><br>
     </div> 
@@ -256,7 +276,5 @@
             </div>
             <div class="Select" style="text-align: center; color:rgb(225 , 126, 59)">Select Plan</div>
         </div>
+    </body>
 </html>
-
-
-
