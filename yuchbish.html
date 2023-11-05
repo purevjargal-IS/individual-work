@@ -3,13 +3,781 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.css">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100&family=Fira+Sans:wght@200&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="sololearn.webp">
     <title>Sololearn-Learn code for FREE!</title>
+
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /*align-items: center;*/
+
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  padding: 3rem 3rem 3rem 3rem;
+  z-index: 999;
+  justify-content: center;
+  
+}
+     
+.center-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 2000px; 
+}
+
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-section img {
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  padding: 0 0 0 200px;
+}
+
+.logo-text {
+  font-size: 50px; 
+  font-weight: bold;
+  align-items: center;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.menu .highlight a {
+  background-color: orange;
+  padding: 20px 70px;
+  border-radius: 5px;
+  margin-left: 30px;
+  height: 10px;
+}
+
+.menu ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.menu li {
+  display: inline;
+  margin: 0 ;
+  font-size: 24px;
+  padding: 0;
+}
+
+
+.center-content.profile-section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.profile-section img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0 10rem 0 0 ;
+}
+
+
+.menu li:not(:last-child) {
+  margin-left: 38px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.main{
+    margin-top: 150px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+
+    
+    
+}
+ h1{
+   
+    text-align: center;
+    margin-top: 150px;
+    font-size: 2rem;
+}
+.dropdown{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search-section {
+  margin-top: 40px;
+  margin-left: 25%;
+  height: 30px;
+  width: 620px;
+  display: flex;
+  gap: 20px ;
+}
+
+
+#search-bar {
+  /*flex: 1;*/
+  height: 3rem;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#search-bar:focus {
+  border-color: blue;
+  
+}
+
+
+#search-button {
+  height: 3rem;
+  width: 150px; 
+  background-color: white;
+  color: #3895d3;
+  border: 1px solid #3895d3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#search-bar + #search-button {
+  margin-left: -1px;
+}
+
+#search-button:hover {
+  background-color: #d8ecff;
+  transition: 500ms;
+
+}
+
+
+
+.card-container {
+    margin-left: 25%; 
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-right: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 55rem;
+    min-width: 55rem;
+    
+  }
+  
+.card {
+  width: 39%; 
+  height: 325px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: none;
+  padding: 0 0 0 0;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
+  box-sizing: border-box;
+  gap: 40px;
+  overflow: hidden;
+  margin-right: 0px;
+  position: relative;
+  }
+.card:hover {
+  transform: translateY(-5px); 
+  }
+
+.card img{
+  max-width: 300px;
+  height: 325px ;
+  border-radius: 10px;
+  position: relative;
+  }
+
+.text-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #side-panel {
+    width: 250px; 
+    background-color: transparent; 
+    position: fixed;
+    top: 10rem;
+    right: 20rem;
+    height: 30rem;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  .side-card {
+    background-color: #e7e7e7; 
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .card-content {
+    color: #363636; 
+    padding: 5px;
+    font-weight: 600;
+    
+  }
+  
+  .card-content p{
+    font-size: 1rem;
+  }
+
+  span {
+    display: block;
+    font-size: 13px;
+    text-align: left;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Fira sans', sans-serif;
+  width: 100%;
+}
+
+.layer1 {
+  background-color: #1F1E28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px; 
+  margin-bottom: 0;
+}
+
+.layer1.section{ 
+  display: flex;
+  max-width: 2000px;
+  justify-content: space-between;  
+}
+
+.link-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.link-list li {
+  display: flex;
+  align-items: center;
+  margin: 0px 69px;
+}
+
+.link-list a {
+  text-decoration: none;
+}
+
+.link-list span {
+  font-family: 'Fira sans' sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  font-weight: 1rem;
+  text-align: left;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #1F1E28;
+  color: #0077B5;
+}
+
+.fa-facebook {
+  background: #1F1E28;
+  color: #4267B2;
+} 
+
+.fa-twitter {
+  background: #1F1E28;
+  color: #1CA1F2
+}  
+
+.insta img{ 
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.youtube img {
+  width: 60px; 
+  height: 40px; 
+}
+
+.apple img {
+  width: auto;
+  height: 70px;
+  margin-right: -100px; 
+  margin-left: -80px;
+}
+
+.google img {
+  width: auto; 
+  height: 70px; 
+  margin-right: 0px;
+  margin-left: -35px;
+}
+
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #18171D;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  max-width: 2000px;
+  width: 100%;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-left: 100px;
+} 
+
+.footer-left {
+  list-style-type: none;
+  display: flex;
+  margin: 0 0 0 100;
+  padding: 0;
+
+}
+
+.footer-left li {
+  margin: 0 7px;
+  
+}
+
+.footer-left a {
+  text-decoration: none;
+  color: #5A6573;
+  font-weight: 200;
+  font-size: 15px;
+  font-family: 'Fira sans', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right p {
+  margin-left: -10px;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #3E6776;
+}
+
+.white-text {
+  color: white;
+}
+
+@media screen and (min-width: 2400px){
+  #side-panel {
+    right: 60rem;
+  }
+
+}
+
+@media screen and (max-width: 1536px){
+  #side-panel {
+    right: 10rem;
+  
+
+}
+*{
+  font-size: 13px;
+}
+.logo-section img {
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.card-container {
+  margin-left: 25%; 
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-right: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  max-width: 75rem;
+  min-width: 75rem;
+  
+}
+
+.card {
+width: 39%; 
+height: 325px;
+margin-bottom: 20px;
+background-color: #fff;
+border: none;
+padding: 0 0 0 0;
+border-radius: 5px;
+text-align: left;
+font-size: 16px;
+box-sizing: border-box;
+gap: 40px;
+overflow: hidden;
+margin-right: 0px;
+position: relative;
+}
+}
+
+@media screen and (max-width: 1372px){
+  #side-panel{
+    right: 0.5rem;
+  }
+
+}
+
+@media screen and (max-width: 1280px){
+  #side-panel {
+    width: 200px; 
+    background-color: transparent; 
+    position: fixed;
+    top: 10rem;
+    right: 1rem;
+    height: 20rem;
+    display: inline-flex;
+    flex-direction: column;
+  }
+  
+  .side-card {
+    background-color: #e7e7e7; 
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .card-content {
+    color: #363636; 
+    padding: 5px;
+    font-weight: 600;
+    
+  }
+  
+  .card-content p{
+    font-size: 10px;
+  }
+
+  span {
+    display: block;
+    font-size: 13px;
+    text-align: left;
+  }
+}
+
+
+
+@media screen and (max-width: 1900px){
+
+
+  *{
+    font-size: 10px;
+  }
+
+.profile-section{
+  display: none;
+}
+
+  #side-panel{
+    display: none;
+  }
+  #logo-image {
+    content: url("sololearn.webp");
+    margin-left: 0;
+  }
+  
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-section img {
+  width: 100%;
+  height: 55px;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 0;
+
+  }
+  .dropdown a{
+    text-decoration: none;
+  color: #0f0f0f;
+  font-weight: 3px;
+  font-size: 15px;
+  }
+
+  #dropdown-toggle{
+    text-decoration: none;
+  }
+  
+  .dropdown .dropdown-content {
+    
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .toggle {
+    display: none;
+  }
+  
+  .open .dropdown-content {
+    display: block;
+  }
+  
+  .menu li:not(:last-child) {
+    margin-left: 38px;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .menu{
+    display: none;
+  }
+
+
+  .menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  
+  .line {
+    width: 100%;
+    height: 4px;
+    background-color: #333; /* Change this color to your preferred icon color */
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-icon:hover .line {
+    background-color: #ff6600; /* Change the color on hover if desired */
+  }
+  
+  /* Style for menu open/close animations */
+  .menu-opened .line:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-opened .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 3px);
+  }
+  .menu-opened .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -3px);
+
+  }
+
+
+
+  .main{
+    margin-top: 0rem;
+  }
+
+
+
+  .search-section{
+    width: 40rem;
+  }
+
+  .card-container {
+    margin-left: 25%; 
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    margin-right: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: left;
+    max-width: 55rem;
+    min-width: 55rem;
+    
+  }
+    
+  .card {
+    width: 100%; 
+    height: 325px;
+    margin-bottom: 20px;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
+    box-sizing: border-box;
+    gap: 40px;
+    overflow: hidden;
+    margin-right: 0px;
+    position: relative;
+    }
+
+}
+
+    </style>
+
+
 </head>
 <body> 
     <div class="header">
@@ -93,7 +861,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="cardback.webp" alt="">
+                    <img src="cardback.png" alt="">
                     <div class="text-overlay">
                         <h2>What is a database and how does it work</h2><br>
                         <span>&#1238368;5 min read</span>
