@@ -291,7 +291,7 @@ body {
     background-color: transparent; 
     position: fixed;
     top: 10rem;
-    right: 20rem;
+    right: 30rem;
     height: 30rem;
     display: inline-flex;
     flex-direction: column;
@@ -563,12 +563,71 @@ position: relative;
 }
 }
 
-@media screen and (max-width: 1372px){
+@media screen and (min-width: 2860px){
   #side-panel{
-    right: 0.5rem;
+    right: 100rem;
   }
 
 }
+
+@media screen and (min-width: 2130px){
+  #side-panel{
+    right: 40rem;
+  }
+
+}
+
+@media screen and (min-width: 2400px){
+  #side-panel{
+    right: 50rem;
+    
+  }
+}
+
+@media screen and (max-width: 1372px){
+  #side-panel{
+    right: 0.5rem;
+    height: 10rem;
+  }
+
+  .card-content p{
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: 1750px){
+  #side-panel{
+    right: 25rem;
+    height: 15rem;
+  }
+  .card-content p{
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: 1440px){
+  #side-panel{
+    right: 10rem;
+    height: 15rem;
+  }
+  .card-content p{
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: 1540px){
+  #side-panel{
+    right: 7rem;
+    height: 15rem;
+  }
+  .card-content p{
+    font-size: 10px;
+  }
+}
+
 
 @media screen and (max-width: 1280px){
   #side-panel {
@@ -577,7 +636,7 @@ position: relative;
     position: fixed;
     top: 10rem;
     right: 1rem;
-    height: 20rem;
+    height: 15rem;
     display: inline-flex;
     flex-direction: column;
   }
@@ -610,7 +669,7 @@ position: relative;
 
 
 
-@media screen and (max-width: 1900px){
+@media screen and (max-width: 1200px){
 
 
   *{
@@ -710,16 +769,16 @@ position: relative;
   .line {
     width: 100%;
     height: 4px;
-    background-color: #333; /* Change this color to your preferred icon color */
+    background-color: #333; 
     margin: 4px 0;
     transition: 0.4s;
   }
   
   .menu-icon:hover .line {
-    background-color: #ff6600; /* Change the color on hover if desired */
+    background-color: #ff6600; 
   }
   
-  /* Style for menu open/close animations */
+
   .menu-opened .line:nth-child(2) {
     opacity: 0;
   }
